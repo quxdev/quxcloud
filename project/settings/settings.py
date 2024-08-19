@@ -5,6 +5,10 @@ import dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+DATA_DIR = os.path.join(BASE_DIR, "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+
 dotenv.load_dotenv(os.path.join(BASE_DIR, "project/.env"))
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", None)
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     "qux.auth",
     "qux.token",
     "apps.gizmo",
+    "apps.aws",
 ]
 
 MIDDLEWARE = [

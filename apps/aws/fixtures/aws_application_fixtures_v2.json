@@ -1,0 +1,158 @@
+[
+    {
+        "model": "aws.Application",
+        "pk": 1,
+        "fields": {
+            "slug": "application-1",
+            "repo_name": "badger",
+            "known_as": "badger",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 2,
+        "fields": {
+            "slug": "application-2",
+            "repo_name": "zeus",
+            "known_as": "zeus",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 3,
+        "fields": {
+            "slug": "application-3",
+            "repo_name": "prices",
+            "known_as": "prices",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 4,
+        "fields": {
+            "slug": "application-4",
+            "repo_name": "backdata",
+            "known_as": "backdata",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 5,
+        "fields": {
+            "slug": "application-5",
+            "repo_name": "katana",
+            "known_as": "katana",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 6,
+        "fields": {
+            "slug": "application-6",
+            "repo_name": "prometheus",
+            "known_as": "prometheus",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 7,
+        "fields": {
+            "slug": "application-7",
+            "repo_name": "assets",
+            "known_as": "assets",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 8,
+        "fields": {
+            "slug": "application-8",
+            "repo_name": "kronos",
+            "known_as": "kronos",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 9,
+        "fields": {
+            "slug": "application-9",
+            "repo_name": "flight",
+            "known_as": "flight",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 10,
+        "fields": {
+            "slug": "application-10",
+            "repo_name": "odin",
+            "known_as": "odin",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 11,
+        "fields": {
+            "slug": "application-11",
+            "repo_name": "spitfiredev",
+            "known_as": "spitfiredev",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Application",
+        "pk": 12,
+        "fields": {
+            "slug": "application-12",
+            "repo_name": "spitfire",
+            "known_as": "spitfire",
+            "description": "",
+            "url": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    }
+]

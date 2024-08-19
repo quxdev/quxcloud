@@ -29,10 +29,10 @@
     <li class="dropdown-divider"></li>
     <li class="dropdown-header {% if user.is_superuser %}text-danger{% endif %}">Users</li>
     <li class="dropdown-item {% if user.is_superuser %}text-danger{% endif %}">
-      <a href="{% url 'user:list' %}">List</a>
+      {% comment %} <a href="{% url 'user:list' %}">List</a> {% endcomment %}
     </li>
     <li class="dropdown-item {% if user.is_superuser %}text-danger{% endif %}">
-      <a href="{% url 'user:create' %}">Create</a>
+      {% comment %} <a href="{% url 'user:create' %}">Create</a> {% endcomment %}
     </li>
     {% endif %}
   </ul>

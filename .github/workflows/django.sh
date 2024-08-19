@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export DJANGO_SECRET_KEY='thequickbrownfoxjumpsoverthelazydog'
 export DJANGO_DEBUG='True'
 export DJANGO_ALLOWED_HOSTS='localhost'

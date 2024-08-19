@@ -1,0 +1,422 @@
+[
+    {
+        "model": "aws.Resource",
+        "pk": 1,
+        "fields": {
+            "slug": "resource-1",
+            "name": "arn:aws:s3:::*",
+            "logical_name": "S3All",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 2,
+        "fields": {
+            "slug": "resource-2",
+            "name": "arn:aws:s3:::*/*",
+            "logical_name": "S3All",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 3,
+        "fields": {
+            "slug": "resource-3",
+            "name": "arn:aws:s3:::us-ercotdata/*",
+            "logical_name": "ISOData",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 4,
+        "fields": {
+            "slug": "resource-4",
+            "name": "arn:aws:s3:::us-caisodata/*",
+            "logical_name": "ISOData",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 5,
+        "fields": {
+            "slug": "resource-5",
+            "name": "arn:aws:s3:::us-nyisodata/*",
+            "logical_name": "ISOData",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 6,
+        "fields": {
+            "slug": "resource-6",
+            "name": "arn:aws:s3:::us-isonedata/*",
+            "logical_name": "ISOData",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 7,
+        "fields": {
+            "slug": "resource-7",
+            "name": "arn:aws:s3:::us-misodata/*",
+            "logical_name": "ISOData",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 8,
+        "fields": {
+            "slug": "resource-8",
+            "name": "*",
+            "logical_name": "EmailSend",
+            "resource_type": "SES",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 9,
+        "fields": {
+            "slug": "resource-9",
+            "name": "arn:aws:s3:::us-prices-historicals/*",
+            "logical_name": "PricesBackup",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 10,
+        "fields": {
+            "slug": "resource-10",
+            "name": "arn:aws:lambda:*:*:function:*",
+            "logical_name": "Lambda",
+            "resource_type": "Lambda",
+            "region": "us-east-1",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 11,
+        "fields": {
+            "slug": "resource-11",
+            "name": "arn:aws:cloudformation:*:*:stack/*",
+            "logical_name": "CloudFormation",
+            "resource_type": "Cloudformation",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 12,
+        "fields": {
+            "slug": "resource-12",
+            "name": "arn:aws:iam::*:role/*",
+            "logical_name": "IamRole",
+            "resource_type": "Iam Role",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 13,
+        "fields": {
+            "slug": "resource-13",
+            "name": "arn:aws:logs:*:*:*",
+            "logical_name": "Logs",
+            "resource_type": "Logs",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 14,
+        "fields": {
+            "slug": "resource-14",
+            "name": "arn:aws:s3:::enine-test/*",
+            "logical_name": "S3Test",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 15,
+        "fields": {
+            "slug": "resource-15",
+            "name": "arn:aws:s3:::flight-output/*",
+            "logical_name": "FlightOutput",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 16,
+        "fields": {
+            "slug": "resource-16",
+            "name": "arn:aws:s3:::flight-temp/*",
+            "logical_name": "FlightTemp",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 17,
+        "fields": {
+            "slug": "resource-17",
+            "name": "arn:aws:sqs:us-east-1:609490572092:SpitfireQueue",
+            "logical_name": "LambdaProdQueue",
+            "resource_type": "SQS",
+            "region": "us-east-1",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 18,
+        "fields": {
+            "slug": "resource-18",
+            "name": "arn:aws:s3:::flight-input/*",
+            "logical_name": "FlightInput",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "prod",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 19,
+        "fields": {
+            "slug": "resource-19",
+            "name": "arn:aws:lambda:*:*:function:*",
+            "logical_name": "Lambda",
+            "resource_type": "Lambda",
+            "region": "ap-south-1",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 20,
+        "fields": {
+            "slug": "resource-20",
+            "name": "arn:aws:cloudformation:*:*:stack/*",
+            "logical_name": "CloudFormation",
+            "resource_type": "Cloudformation",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 21,
+        "fields": {
+            "slug": "resource-21",
+            "name": "arn:aws:iam::*:role/*",
+            "logical_name": "IamRole",
+            "resource_type": "Iam Role",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 22,
+        "fields": {
+            "slug": "resource-22",
+            "name": "arn:aws:logs:*:*:*",
+            "logical_name": "Logs",
+            "resource_type": "Logs",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 23,
+        "fields": {
+            "slug": "resource-23",
+            "name": "arn:aws:s3:::*",
+            "logical_name": "S3All",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 24,
+        "fields": {
+            "slug": "resource-24",
+            "name": "arn:aws:s3:::*/*",
+            "logical_name": "S3All",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 25,
+        "fields": {
+            "slug": "resource-25",
+            "name": "*",
+            "logical_name": "EmailSend",
+            "resource_type": "SES",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 26,
+        "fields": {
+            "slug": "resource-26",
+            "name": "arn:aws:s3:::flight-input-dev/*",
+            "logical_name": "FlightInput",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 27,
+        "fields": {
+            "slug": "resource-27",
+            "name": "arn:aws:s3:::enine-test/*",
+            "logical_name": "S3Test",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 28,
+        "fields": {
+            "slug": "resource-28",
+            "name": "arn:aws:s3:::flight-output-dev/*",
+            "logical_name": "FlightOutput",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 29,
+        "fields": {
+            "slug": "resource-29",
+            "name": "arn:aws:s3:::flight-temp-dev/*",
+            "logical_name": "FlightTemp",
+            "resource_type": "S3",
+            "region": "",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.Resource",
+        "pk": 30,
+        "fields": {
+            "slug": "resource-30",
+            "name": "arn:aws:sqs:ap-south-1:609490572092:SpitfireDevQueue",
+            "logical_name": "LambdaDevQueue",
+            "resource_type": "SQS",
+            "region": "ap-south-1",
+            "environment": "dev",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    }
+]

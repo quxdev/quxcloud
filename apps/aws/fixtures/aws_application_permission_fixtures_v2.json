@@ -1,0 +1,964 @@
+[
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 1,
+        "fields": {
+            "slug": "appperm-1",
+            "application": 1,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 2,
+        "fields": {
+            "slug": "appperm-2",
+            "application": 1,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 3,
+        "fields": {
+            "slug": "appperm-3",
+            "application": 1,
+            "resource": 3,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 4,
+        "fields": {
+            "slug": "appperm-4",
+            "application": 1,
+            "resource": 4,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 5,
+        "fields": {
+            "slug": "appperm-5",
+            "application": 1,
+            "resource": 5,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 6,
+        "fields": {
+            "slug": "appperm-6",
+            "application": 1,
+            "resource": 6,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 7,
+        "fields": {
+            "slug": "appperm-7",
+            "application": 1,
+            "resource": 7,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 8,
+        "fields": {
+            "slug": "appperm-8",
+            "application": 1,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 9,
+        "fields": {
+            "slug": "appperm-9",
+            "application": 2,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 10,
+        "fields": {
+            "slug": "appperm-10",
+            "application": 2,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 11,
+        "fields": {
+            "slug": "appperm-11",
+            "application": 2,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 12,
+        "fields": {
+            "slug": "appperm-12",
+            "application": 3,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 13,
+        "fields": {
+            "slug": "appperm-13",
+            "application": 3,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 14,
+        "fields": {
+            "slug": "appperm-14",
+            "application": 3,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 15,
+        "fields": {
+            "slug": "appperm-15",
+            "application": 3,
+            "resource": 9,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 16,
+        "fields": {
+            "slug": "appperm-16",
+            "application": 4,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 17,
+        "fields": {
+            "slug": "appperm-17",
+            "application": 4,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 18,
+        "fields": {
+            "slug": "appperm-18",
+            "application": 4,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 19,
+        "fields": {
+            "slug": "appperm-19",
+            "application": 5,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 20,
+        "fields": {
+            "slug": "appperm-20",
+            "application": 5,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 21,
+        "fields": {
+            "slug": "appperm-21",
+            "application": 5,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 22,
+        "fields": {
+            "slug": "appperm-22",
+            "application": 6,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 23,
+        "fields": {
+            "slug": "appperm-23",
+            "application": 6,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 24,
+        "fields": {
+            "slug": "appperm-24",
+            "application": 6,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 25,
+        "fields": {
+            "slug": "appperm-25",
+            "application": 7,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 26,
+        "fields": {
+            "slug": "appperm-26",
+            "application": 7,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 27,
+        "fields": {
+            "slug": "appperm-27",
+            "application": 7,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 28,
+        "fields": {
+            "slug": "appperm-28",
+            "application": 8,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 29,
+        "fields": {
+            "slug": "appperm-29",
+            "application": 8,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 30,
+        "fields": {
+            "slug": "appperm-30",
+            "application": 8,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 31,
+        "fields": {
+            "slug": "appperm-31",
+            "application": 9,
+            "resource": 10,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 32,
+        "fields": {
+            "slug": "appperm-32",
+            "application": 9,
+            "resource": 11,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 33,
+        "fields": {
+            "slug": "appperm-33",
+            "application": 9,
+            "resource": 12,
+            "permission": 5,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 34,
+        "fields": {
+            "slug": "appperm-34",
+            "application": 9,
+            "resource": 13,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 35,
+        "fields": {
+            "slug": "appperm-35",
+            "application": 9,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 36,
+        "fields": {
+            "slug": "appperm-36",
+            "application": 9,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 37,
+        "fields": {
+            "slug": "appperm-37",
+            "application": 9,
+            "resource": 14,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 38,
+        "fields": {
+            "slug": "appperm-38",
+            "application": 9,
+            "resource": 15,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 39,
+        "fields": {
+            "slug": "appperm-39",
+            "application": 9,
+            "resource": 16,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 40,
+        "fields": {
+            "slug": "appperm-40",
+            "application": 9,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 41,
+        "fields": {
+            "slug": "appperm-41",
+            "application": 9,
+            "resource": 17,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 42,
+        "fields": {
+            "slug": "appperm-42",
+            "application": 10,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 43,
+        "fields": {
+            "slug": "appperm-43",
+            "application": 10,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 44,
+        "fields": {
+            "slug": "appperm-44",
+            "application": 10,
+            "resource": 18,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 45,
+        "fields": {
+            "slug": "appperm-45",
+            "application": 10,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 46,
+        "fields": {
+            "slug": "appperm-46",
+            "application": 11,
+            "resource": 19,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 47,
+        "fields": {
+            "slug": "appperm-47",
+            "application": 11,
+            "resource": 20,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 48,
+        "fields": {
+            "slug": "appperm-48",
+            "application": 11,
+            "resource": 21,
+            "permission": 5,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 49,
+        "fields": {
+            "slug": "appperm-49",
+            "application": 11,
+            "resource": 22,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 50,
+        "fields": {
+            "slug": "appperm-50",
+            "application": 11,
+            "resource": 23,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 51,
+        "fields": {
+            "slug": "appperm-51",
+            "application": 11,
+            "resource": 24,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 52,
+        "fields": {
+            "slug": "appperm-52",
+            "application": 11,
+            "resource": 25,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 53,
+        "fields": {
+            "slug": "appperm-53",
+            "application": 12,
+            "resource": 10,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 54,
+        "fields": {
+            "slug": "appperm-54",
+            "application": 12,
+            "resource": 11,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 55,
+        "fields": {
+            "slug": "appperm-55",
+            "application": 12,
+            "resource": 12,
+            "permission": 5,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 56,
+        "fields": {
+            "slug": "appperm-56",
+            "application": 12,
+            "resource": 13,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 57,
+        "fields": {
+            "slug": "appperm-57",
+            "application": 12,
+            "resource": 1,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 58,
+        "fields": {
+            "slug": "appperm-58",
+            "application": 12,
+            "resource": 2,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 59,
+        "fields": {
+            "slug": "appperm-59",
+            "application": 12,
+            "resource": 8,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 60,
+        "fields": {
+            "slug": "appperm-60",
+            "application": 10,
+            "resource": 23,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 61,
+        "fields": {
+            "slug": "appperm-61",
+            "application": 10,
+            "resource": 24,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 62,
+        "fields": {
+            "slug": "appperm-62",
+            "application": 10,
+            "resource": 26,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 63,
+        "fields": {
+            "slug": "appperm-63",
+            "application": 10,
+            "resource": 25,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 64,
+        "fields": {
+            "slug": "appperm-64",
+            "application": 9,
+            "resource": 19,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 65,
+        "fields": {
+            "slug": "appperm-65",
+            "application": 9,
+            "resource": 20,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 66,
+        "fields": {
+            "slug": "appperm-66",
+            "application": 9,
+            "resource": 21,
+            "permission": 5,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 67,
+        "fields": {
+            "slug": "appperm-67",
+            "application": 9,
+            "resource": 22,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 68,
+        "fields": {
+            "slug": "appperm-68",
+            "application": 9,
+            "resource": 23,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 69,
+        "fields": {
+            "slug": "appperm-69",
+            "application": 9,
+            "resource": 24,
+            "permission": 1,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 70,
+        "fields": {
+            "slug": "appperm-70",
+            "application": 9,
+            "resource": 27,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 71,
+        "fields": {
+            "slug": "appperm-71",
+            "application": 9,
+            "resource": 28,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 72,
+        "fields": {
+            "slug": "appperm-72",
+            "application": 9,
+            "resource": 29,
+            "permission": 2,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 73,
+        "fields": {
+            "slug": "appperm-73",
+            "application": 9,
+            "resource": 25,
+            "permission": 3,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    },
+    {
+        "model": "aws.ApplicationPermission",
+        "pk": 74,
+        "fields": {
+            "slug": "appperm-74",
+            "application": 9,
+            "resource": 30,
+            "permission": 4,
+            "description": "",
+            "dtm_created": "2024-08-19T11:08:01.968575",
+            "dtm_updated": "2024-08-19T11:08:01.968575"
+        }
+    }
+]
