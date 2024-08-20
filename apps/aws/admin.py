@@ -20,10 +20,10 @@ class ApplicationAdmin(admin.ModelAdmin):
 
 @admin.register(Permission)
 class PermissionAdmin(admin.ModelAdmin):
-    list_display = ("permission",)
-    search_fields = ("permission",)
-    list_filter = ("permission",)
-    ordering = ("permission",)
+    list_display = ("name",)
+    search_fields = ("name",)
+    list_filter = ("name",)
+    ordering = ("name",)
 
 
 @admin.register(ApplicationPermission)
@@ -32,7 +32,7 @@ class ApplicationPermissionAdmin(admin.ModelAdmin):
     search_fields = (
         "application__repo_name",
         "resource__name",
-        "permission__permission",
+        "permission__name",
         "resource__environment",
     )
     list_filter = ("application", "resource", "permission")

@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "slug": "permission-1",
-            "permission": "read",
+            "name": "read",
             "description": "",
             "dtm_created": "2024-08-19T11:08:01.968575",
             "dtm_updated": "2024-08-19T11:08:01.968575"
@@ -15,7 +15,7 @@
         "pk": 2,
         "fields": {
             "slug": "permission-2",
-            "permission": "write",
+            "name": "write",
             "description": "",
             "dtm_created": "2024-08-19T11:08:01.968575",
             "dtm_updated": "2024-08-19T11:08:01.968575"
@@ -26,7 +26,7 @@
         "pk": 3,
         "fields": {
             "slug": "permission-3",
-            "permission": "send",
+            "name": "send",
             "description": "",
             "dtm_created": "2024-08-19T11:08:01.968575",
             "dtm_updated": "2024-08-19T11:08:01.968575"
@@ -37,7 +37,7 @@
         "pk": 4,
         "fields": {
             "slug": "permission-4",
-            "permission": "all",
+            "name": "all",
             "description": "",
             "dtm_created": "2024-08-19T11:08:01.968575",
             "dtm_updated": "2024-08-19T11:08:01.968575"
@@ -48,7 +48,7 @@
         "pk": 5,
         "fields": {
             "slug": "permission-5",
-            "permission": "passrole",
+            "name": "passrole",
             "description": "",
             "dtm_created": "2024-08-19T11:08:01.968575",
             "dtm_updated": "2024-08-19T11:08:01.968575"

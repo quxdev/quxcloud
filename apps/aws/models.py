@@ -10,15 +10,39 @@ from qux.models import QuxModel
 PERMISSION_ACTIONS_MAP = {
     "s3": {
         "read": ["s3:GetObject", "s3:ListBucket"],
-        "write": ["s3:PutObject", "s3:DeleteObject"],
+        "write": ["s3:PutObject", "s3:DeleteObject", "s3:GetObject", "s3:ListBucket"],
     },
-    "sns": {
-        "send": ["sns:Publish"],
+    "ses": {
+        "send": ["ses:SendEmail", "ses:SendRawEmail", "ses:SendTemplatedEmail"],
     },
     "iam": {
-        "iamrolepass": ["iam:PassRole"],
+        "passrole": ["iam:PassRole"],
     },
-    # Add more resource types and permissions as needed
+    "lambda": {
+        "all": [
+            "lambda:CreateFunction",
+            "lambda:UpdateFunctionCode",
+            "lambda:UpdateFunctionConfiguration",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:ListFunctions",
+            "lambda:InvokeFunction",
+        ],
+    },
+    "cloudformation": {
+        "all": [
+            "cloudformation:CreateStack",
+            "cloudformation:UpdateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplate",
+            "cloudformation:ListStackResources",
+        ]
+    },
+    "logs": {
+        "write": ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"]
+    },
+    "sqs": {"all": "sqs:*"},
 }
 
 
@@ -83,7 +107,7 @@ class Application(QuxModel):
         permissions = []
         for app_permission in app_permissions:
             resource_type = app_permission.resource.resource_type.lower()
-            permission = app_permission.permission.permission.lower()
+            permission = app_permission.permission.name.lower()
 
             # Get the AWS actions based on the resource type and permission
             actions = PERMISSION_ACTIONS_MAP.get(resource_type, {}).get(permission, [])
@@ -105,9 +129,10 @@ class Application(QuxModel):
             permissions.append(permission_entry)
 
         if not permissions:
-            raise ValueError(
+            print(
                 f"No valid permissions generated for {self.repo_name} in {environment}."
             )
+            return None
 
         # Role structure with inline policy
         role_data = {
