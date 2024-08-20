@@ -1,4 +1,13 @@
 from django.contrib import admin
+from apps.aws.aws_models import (
+    EC2Instance,
+    S3Bucket,
+    IAMRole,
+    IAMPolicy,
+    IAMInlinePolicy,
+    LambdaFunction,
+    SQSQueue,
+)
 from .models import Resource, Application, Permission, ApplicationPermission
 
 
@@ -37,3 +46,15 @@ class ApplicationPermissionAdmin(admin.ModelAdmin):
     )
     list_filter = ("application", "resource", "permission")
     ordering = ("application", "resource", "permission")
+
+
+# AWS models from aws_models.py
+
+# Register your models here
+admin.site.register(EC2Instance)
+admin.site.register(S3Bucket)
+admin.site.register(IAMRole)
+admin.site.register(IAMPolicy)
+admin.site.register(IAMInlinePolicy)
+admin.site.register(LambdaFunction)
+admin.site.register(SQSQueue)
