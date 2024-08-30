@@ -1,0 +1,8 @@
+fsck gave this output
+Checking object directories: 100% (256/256), done.
+Checking objects: 100% (81/81), done.
+dangling tree f6c09cb2b9c40739222b32f3f04c2c13a2cf01a9
+dangling commit 39449c45d0b14b4582023c5eae6a428aafa59e91
+dangling tree 1e076f587d0d99d954985e31c9eed2566198947e
+dangling tree 644c17466f68ce4787ad754601e67af1f379915a
+dangling commit 86211f80de692c0d9da53722b0c89a933ef8d885

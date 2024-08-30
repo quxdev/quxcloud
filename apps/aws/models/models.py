@@ -1,7 +1,7 @@
 import os
 import json
-import boto3
 import time
+import boto3
 from django.conf import settings
 from django.db import models
 
