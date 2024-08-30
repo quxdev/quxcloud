@@ -1,0 +1,111 @@
+---
+# vars:
+#   mysql_database:
+#   mysql_username:
+#   service: <name of service>
+#   wrapper: <name of django project wrapper>
+#   projdir: <project settings directory, typically project>
+#   account: <service account username>
+#   enable_vueapp: true/false
+- name: Set up Django App
+  hosts: all
+  become: yes
+  become_user: "{{ service_account }}"
+  tasks:
+    - set_fact:
+        code_path: "{{ code_path }}"
+        venv_path: "{{ venv_path }}"
+    
+    - name: Ensure the repository's submodules are initialized and updated
+      command: git submodule update --init
+      args:
+        chdir: "{{ code_path }}"
+
+    - name: Create virtual environment
+      command: python3 -m venv "{{ venv_path }}"
+      args:
+        creates: "{{ venv_path }}/bin/activate"
+
+    - name: Upgrade pip within the virtual environment
+      command: "{{ venv_path }}/bin/pip install --upgrade pip"
+      environment:
+        PATH: "{{ venv_path }}/bin:{{ ansible_env.PATH }}"
+    
+    - name: Install requirements
+      pip:
+        requirements: "{{ requirements }}"
+        virtualenv: "{{ venv_path }}"
+      environment:
+        PATH: "{{ venv_path }}/bin:{{ ansible_env.PATH }}"
+      ignore_errors: yes
+    
+    - name: install npm packages
+      community.general.npm:
+        path: "{{ code_path + '/vueapp' }}"
+      ignore_errors: yes
+      when: enable_vueapp is defined and enable_vueapp == true
+
+    - name: dotenv
+      block:
+        - name: create dotenv file in idempotent way if does not exist
+          vars:
+            ansible_become_user: "{{ service_account }}"
+          file:
+            path: "{{ code_path + '/' + projdir + '/.env' }}"
+            state: touch
+            mode: a+rw
+            modification_time: preserve
+            access_time: preserve
+
+        - name: update dotenv
+          lineinfile:
+            path: "{{ code_path + '/' + projdir + '/.env' }}"
+            state: present
+            regexp: "{{ item.regexp }}"
+            line: "{{ item.line }}"
+          with_items:
+            - regexp: "SECRET_KEY"
+              line: "SECRET_KEY=\"{{ lookup('password', '/tmp/' + hostname + '/SECRET_KEY length=50') }}\""
+            - regexp: "DJANGO_SECRET_KEY"
+              line: "DJANGO_SECRET_KEY=\"{{ lookup('password', '/tmp/' + hostname + '/SECRET_KEY length=50') }}\""
+            - regexp: "DJANGO_DEBUG"
+              line: "DJANGO_DEBUG=true"
+            - regexp: "DB_TYPE"
+              line: "DB_TYPE=\"mysql\""
+            - regexp: "DB_NAME"
+              line: "DB_NAME=\"{{ mysql_database }}\""
+            - regexp: "DB_HOST"
+              line: "# DB_HOST=\"localhost\""
+            - regexp: "DB_PORT"
+              line: "# DB_PORT=\"3303\""
+            - regexp: "DB_USERNAME"
+              line: "DB_USERNAME=\"{{ mysql_username }}\""
+            - regexp: "DB_PASSWORD"
+              line: "DB_PASSWORD=\"{{ lookup('password', '/tmp/' + hostname + '/' + mysql_username + ' length=13') }}\""
+            - regexp: "ALLOWED_HOSTS"
+              line: "ALLOWED_HOSTS=\"{{ fqdn_service }}\""
+            - regexp: "DJANGO_ALLOWED_HOSTS"
+              line: "DJANGO_ALLOWED_HOSTS=\"{{ fqdn_service }}\""
+            - regexp: "BOOTSTRAP"
+              line: "BOOTSTRAP=bs5"
+
+      when: mysql_database is defined and mysql_username is defined
+
+    - name: Check if deploy.sh exists
+      stat:
+        path: "{{ code_path }}/deploy.sh"
+      register: deploy_script
+
+    - name: Make sure deploy.sh is executable
+      file:
+        path: "{{ code_path }}/deploy.sh"
+        mode: u+x
+      when: deploy_script.stat.exists
+
+    - name: Run the deploy.sh script
+      shell: ./deploy.sh
+      args:
+        chdir: "{{ code_path }}"
+      when: deploy_script.stat.exists
+
+...

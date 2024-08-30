@@ -1,0 +1,32 @@
+---
+- name: Setup Mysql
+  hosts: all
+  become: yes
+  tasks:
+
+  - name: mysql.yml
+    block:
+      - name: create new database
+        community.mysql.mysql_db:
+          name: "{{ mysql_database }}"
+
+      - name: remove all anonymous users on the database
+        mysql_user:
+          name: ''
+          host_all: yes
+          state: absent
+
+      - name: create user @ 'localhost'
+        mysql_user:
+          name: "{{ mysql_username }}"
+          password: "{{ lookup('password', '/tmp/' + hostname + '/' + mysql_username + ' length=13') }}"
+          priv: '{{ mysql_database }}.*:ALL,GRANT'
+          state: present
+
+      - name: create user @ '%'
+        mysql_user:
+          name: "{{ mysql_username }}"
+          host: '%'
+          password: "{{ lookup('password', '/tmp/' + hostname + '/' + mysql_username + ' length=13') }}"
+          priv: '{{ mysql_database }}.*:ALL,GRANT'
+          state: present

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.aws.aws_models import (
+from apps.aws.models.aws_models import (
     EC2Instance,
     S3Bucket,
     IAMRole,
@@ -8,7 +8,7 @@ from apps.aws.aws_models import (
     LambdaFunction,
     SQSQueue,
 )
-from .models import Resource, Application, Permission, ApplicationPermission
+from .models.models import Resource, Application, Permission, ApplicationPermission
 
 
 @admin.register(Resource)

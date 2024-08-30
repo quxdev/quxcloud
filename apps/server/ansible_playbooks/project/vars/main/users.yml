@@ -1,0 +1,40 @@
+---
+# - login: <name>
+#   groups: <group>,<group>,<group>
+#   key: <url>
+#   github: <github_user_id>
+#   sudo: <true>
+#   dotfiles: <true>
+
+users:
+- login: vishal
+  key: "https://vishalapte.com/auth_keys"
+  github: vishalapte
+  sudo: true
+  dotfiles: true
+  dotfile_force: no
+
+- login: vishal
+  github: vishalapte
+  sudo: true
+  dotfiles: true
+  dotfile_force: no
+
+- login: finmachines
+  sudo: true
+  dotfiles: true
+  dotfile_force: no
+  create_ed25519: yes...
+
+- login: parag
+  github: sathayep
+  sudo: true
+  dotfiles: true
+  dotfile_force: no
+
+- login: ptripathi
+  github: pushpendra-tripathi
+  sudo: true
+  dotfiles: true
+  dotfile_force: no
+...

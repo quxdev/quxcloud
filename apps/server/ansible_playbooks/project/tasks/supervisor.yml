@@ -1,0 +1,30 @@
+---
+- name: Set up Supervisor
+  hosts: all
+  become: yes
+  tasks:
+    - name: check if file exists
+      stat:
+        path: "{{ code_path  + '/config/etc/supervisor/conf.d/celery.conf' }}"
+      register: supervisor_celery_conf
+
+    - block:
+      - name: create /etc/supervisor/conf.d/service.conf
+        ansible.builtin.copy:
+          remote_src: yes
+          src: "{{ code_path  + '/config/etc/supervisor/conf.d/celery.conf' }}"
+          dest: "{{ '/etc/supervisor/conf.d/' + service + '.conf' }}"
+          owner: root
+          group: root
+          mode: '0755'
+      
+      - name: customize /etc/supervisor/conf.d/service.conf
+        ansible.builtin.replace:
+          path: "{{ '/etc/supervisor/conf.d/' + service + '.conf' }}"
+          regexp: "{{ item.regexp }}"
+          replace: "{{ item.value }}"
+        with_items:
+        - {regexp: "_SERVICE", value: "{{ service }}"}
+        - {regexp: "_ACCOUNT", value: "{{ service_account }}"}
+      when: supervisor_celery_conf.stat.exists
+...

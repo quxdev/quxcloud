@@ -117,7 +117,7 @@ class LambdaFunction(models.Model):
 
 class SQSQueue(models.Model):
     queue_name = models.CharField(max_length=255, unique=True)
-    queue_url = models.URLField(max_length=1024, unique=True)
+    queue_url = models.CharField(max_length=255, unique=True)
     region = models.CharField(max_length=64)
     arn = models.CharField(max_length=255, unique=True)
     created_timestamp = models.DateTimeField()

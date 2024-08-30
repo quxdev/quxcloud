@@ -1,0 +1,19 @@
+[
+{
+  "model": "server.djangoservice",
+  "pk": 1,
+  "fields": {
+    "service": "piper",
+    "wrapper": "piper",
+    "domain": "firstscore.in",
+    "projdir": "project",
+    "service_account": "finmachines",
+    "hostname": "cobra",
+    "python_version": "python3.12",
+    "mysql_database": "piper",
+    "mysql_username": "finmachines",
+    "django_project": "piper",
+    "requirements_file": "requirements/py312_dj5.txt"
+  }
+}
+]

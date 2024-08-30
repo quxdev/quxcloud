@@ -1,0 +1,25 @@
+---
+- block:
+  # - name: Update git repo
+  #   ansible.builtin.git:
+  #     repo: git@github.com:financialmachines/ada.git
+  #     dest: "{{ DJANGO_PROJECT }}"
+  #     version: dev
+  #     clone: no
+  #     update: yes
+
+  - name: npm run build
+    args:
+      chdir: "/opt/{{ DJANGO_PROJECT }}/vueapp"
+    command: npm run build
+
+  - name: Django - collectstatic
+    community.general.django_manage:
+      command: collectstatic
+      project_path: "/opt/{{ DJANGO_PROJECT }}"
+      virtualenv: "/opt/{{ DJANGO_PROJECT }}/venv"
+
+  when: DJANGO_PROJECT is defined
+  notify: 
+  - restart services
+...

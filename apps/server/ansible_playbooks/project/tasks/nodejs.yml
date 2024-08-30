@@ -1,0 +1,32 @@
+---
+- name: install nodejs prerequisites
+  apt:
+    name:
+      - apt-transport-https
+      - gcc
+      - g++
+      - make
+    state: present
+
+- name: add nodejs apt key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state: present
+
+- name: add nodejs repository
+  apt_repository:
+    repo: deb https://deb.nodesource.com/node_16.x {{ ansible_distribution_release }} main
+    state: present
+    update_cache: yes
+
+- name: install nodejs (and npm)
+  apt:
+    pkg: 
+    - nodejs
+    state: latest
+
+- name: install npm package @vue/cli globally
+  community.general.npm:
+    name: "@vue/cli"
+    global: yes
+...

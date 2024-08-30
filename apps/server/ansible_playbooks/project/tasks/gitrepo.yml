@@ -1,0 +1,30 @@
+---
+- name: Setup Git Repo
+  hosts: all,
+  become: yes
+  tasks:
+    - name: skip git clone if full_github_url is not defined
+      fail:
+        msg: "Git repo is undefined"
+      when: full_github_url is not defined or full_github_url == "" or full_github_url == None
+      changed_when: false
+
+    - name: set permission on /opt
+      file:
+        path: /opt
+        mode: "0777"
+
+    - debug:
+        msg: "{{ full_github_url + '/' + git_version|default(omit) }}"
+
+    - name: clone repo {{ full_github_url }}
+      git:
+        repo: "{{ full_github_url }}"
+        dest: "{{ '/opt/' + service + ('/' + wrapper | default('')) }}"
+        version: "{{ git_version | default(omit) }}"
+        force: yes
+        key_file: "{{ '~' + service_account + '/.ssh/id_ed25519' }}"
+        accept_hostkey: yes
+      vars:
+        ansible_become_user: "{{ service_account }}"
+...

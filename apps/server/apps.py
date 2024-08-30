@@ -1,9 +1,9 @@
 from django.apps import AppConfig
 
 
-class AWSConfig(AppConfig):
-    name = "apps.aws"
-    verbose_name = "AWS"
+class ServerConfig(AppConfig):
+    name = "apps.server"
+    verbose_name = "Server"
 
     def ready(self):
         # pylint: disable=unused-import

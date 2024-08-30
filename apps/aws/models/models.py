@@ -1,5 +1,7 @@
 import os
 import json
+import boto3
+import time
 from django.conf import settings
 from django.db import models
 
@@ -152,6 +154,117 @@ class Application(QuxModel):
 
         print(f"Role with permissions saved to {json_file_path}")
         return json_file_path
+
+    def attach_role(self, json_file_name, ec2_instance_id, region):
+        """
+        Creates an IAM role with inline permissions from a JSON file and attaches it to an EC2 instance.
+
+        :param json_file_name: Path to the JSON file containing the IAM role and inline policy details.
+        :param ec2_instance_id: ID of the EC2 instance to which the IAM role will be attached.
+        :param region: AWS region where the EC2 instance is located (default is 'us-west-2').
+        """
+        # Initialize the boto3 clients for IAM and EC2
+        iam_client = boto3.client("iam", region_name=region)
+        ec2_client = boto3.client("ec2", region_name=region)
+
+        # Read the JSON policy file
+        try:
+            with open(json_file_name, "r", encoding="utf-8") as f:
+                policy_data = json.load(f)
+        except FileNotFoundError:
+            print(f"Error: The file '{json_file_name}' does not exist.")
+            return
+        except json.JSONDecodeError:
+            print(f"Error: The file '{json_file_name}' is not a valid JSON file.")
+            return
+
+        # Extract information from the JSON file
+        role_name = policy_data["RoleName"]
+        policy_name = policy_data["InlinePolicy"]["PolicyName"]
+        permissions_policy = {
+            "Version": "2012-10-17",
+            "Statement": policy_data["InlinePolicy"]["Permissions"],
+        }
+
+        # Trust policy JSON for EC2
+        trust_policy = {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {"Service": "ec2.amazonaws.com"},
+                    "Action": "sts:AssumeRole",
+                }
+            ],
+        }
+
+        # Step 1: Create IAM Role
+        try:
+            iam_client.create_role(
+                RoleName=role_name,
+                AssumeRolePolicyDocument=json.dumps(trust_policy),
+                Description=f"Role for EC2 with inline permissions for {role_name}",
+            )
+            print(f"IAM Role '{role_name}' created successfully.")
+        except iam_client.exceptions.EntityAlreadyExistsException:
+            print(f"IAM Role '{role_name}' already exists.")
+
+        # Step 2: Attach Inline Policy to IAM Role
+        try:
+            iam_client.put_role_policy(
+                RoleName=role_name,
+                PolicyName=policy_name,
+                PolicyDocument=json.dumps(permissions_policy),
+            )
+            print(
+                f"Inline policy '{policy_name}' attached to IAM Role '{role_name}' successfully."
+            )
+        except Exception as e:
+            print(f"Failed to attach inline policy to IAM Role: {e}")
+            return
+
+        # Step 3: Create an Instance Profile
+        try:
+            iam_client.create_instance_profile(InstanceProfileName=role_name)
+            print(f"IAM Instance Profile '{role_name}' created successfully.")
+        except iam_client.exceptions.EntityAlreadyExistsException:
+            print(f"IAM Instance Profile '{role_name}' already exists.")
+
+        # Wait for the Instance Profile to be created
+        time.sleep(5)  # Wait 5 seconds to ensure the instance profile is available
+
+        # Step 4: Add the IAM Role to the Instance Profile
+        try:
+            iam_client.add_role_to_instance_profile(
+                InstanceProfileName=role_name, RoleName=role_name
+            )
+            print(
+                f"IAM Role '{role_name}' added to Instance Profile '{role_name}' successfully."
+            )
+        except iam_client.exceptions.LimitExceededException:
+            print(f"Cannot add more roles to the Instance Profile '{role_name}'.")
+        except Exception as e:
+            print(f"Failed to add IAM Role to Instance Profile: {e}")
+            return
+
+        # Step 5: Attach IAM Instance Profile to EC2 Instance
+        try:
+            ec2_client.associate_iam_instance_profile(
+                IamInstanceProfile={"Name": role_name}, InstanceId=ec2_instance_id
+            )
+            print(
+                f"IAM Instance Profile '{role_name}' attached to EC2 Instance '{ec2_instance_id}' successfully."
+            )
+        except ec2_client.exceptions.ClientError as e:
+            print(f"Error attaching IAM Instance Profile to EC2 Instance: {e}")
+
+        # Example usage
+        # create_iam_role_and_attach("your_policy.json", "i-0abc123def456ghi7")
+
+    def create_role_and_attach(self, ec2_instance_id, region, env):
+        json_file_path = self.generate_role(env)
+        if json_file_path:
+            self.attach_role(json_file_path, ec2_instance_id, region)
 
 
 class Permission(QuxModel):

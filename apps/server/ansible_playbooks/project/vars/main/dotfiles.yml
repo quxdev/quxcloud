@@ -1,0 +1,6 @@
+---
+dotfiles:
+  - file: "bash_login"
+  - file: "bash_aliases"
+  - file: "qux_python"
+...

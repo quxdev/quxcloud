@@ -1,0 +1,54 @@
+[
+{
+  "model": "server.sudouser",
+  "pk": 1,
+  "fields": {
+    "login": "vishal",
+    "key": "https://vishalapte.com/auth_keys",
+    "github": "vishalapte",
+    "sudo": true,
+    "dotfiles": true,
+    "dotfile_force": false,
+    "create_ed25519": true
+  }
+},
+{
+  "model": "server.sudouser",
+  "pk": 2,
+  "fields": {
+    "login": "finmachines",
+    "key": "",
+    "github": "",
+    "sudo": true,
+    "dotfiles": true,
+    "dotfile_force": false,
+    "create_ed25519": true
+  }
+},
+{
+  "model": "server.sudouser",
+  "pk": 3,
+  "fields": {
+    "login": "parag",
+    "key": "",
+    "github": "sathayep",
+    "sudo": true,
+    "dotfiles": true,
+    "dotfile_force": false,
+    "create_ed25519": true
+  }
+},
+{
+  "model": "server.sudouser",
+  "pk": 4,
+  "fields": {
+    "login": "pitripathi",
+    "key": "",
+    "github": "pushpendra-tripathi",
+    "sudo": true,
+    "dotfiles": true,
+    "dotfile_force": false,
+    "create_ed25519": true
+  }
+}
+]

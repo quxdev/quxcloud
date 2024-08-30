@@ -1,0 +1,23 @@
+[
+{
+  "model": "server.dotfile",
+  "pk": 1,
+  "fields": {
+    "file": "bash_login"
+  }
+},
+{
+  "model": "server.dotfile",
+  "pk": 2,
+  "fields": {
+    "file": "bash_aliases"
+  }
+},
+{
+  "model": "server.dotfile",
+  "pk": 3,
+  "fields": {
+    "file": "qux_python"
+  }
+}
+]

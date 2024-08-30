@@ -1,0 +1,78 @@
+---
+- name: Set up users
+  hosts: all
+  become: yes
+  tasks:
+    - fail:
+        msg: "NO Users defined"
+      when: users is not defined or users == "" or users == None
+      changed_when: false
+
+    - name: Create user SSH key
+      user:
+        name: "{{ item.login }}"
+        shell: /bin/bash
+        generate_ssh_key: yes
+        ssh_key_type: ed25519
+        ssh_key_bits: 4096
+        ssh_key_comment: "{{ item.login }}@{{ fqdn }}"
+        force: no
+      with_items: "{{ users }}"
+
+    - name: copy dotfiles to ~user
+      get_url:
+        url: "https://raw.githubusercontent.com/quxdev/qconfig/main/shell/{{ item[0] }}"
+        dest: "/home/{{ item[1].login }}/.{{ item[0] }}"
+        owner: "{{ item[1].login }}"
+        group: "{{ item[1].login }}"
+        mode: "0644"
+        force: no
+      with_nested:
+      - "{{ dotfiles }}"
+      - "{{ users }}"
+      when: dotfiles is defined
+
+    
+    - name: get ssh public key to add to github
+      command: cat "{{ '~' + item.login + '/.ssh/id_ed25519.pub' }}"
+      register: pubkeys
+      with_items: "{{ users }}"
+
+    - name: print ssh public keys
+      debug:
+        msg: "{{ item.item.login }}: {{ item.stdout }}"
+      with_items: "{{ pubkeys.results }}"
+
+    - name: set authorized_key - https://github.com/githubid.keys
+      authorized_key:
+        user: "{{ item.login }}"
+        key: "https://github.com/{{ item.github }}.keys"
+        state: present
+      with_items: "{{ users }}"
+      when: item.github is defined
+      ignore_errors: True
+
+    - name: set authorized_key - custom
+      authorized_key:
+        user: "{{ item.login }}"
+        key: "{{ item.key }}"
+        state: present
+      with_items: "{{ users }}"
+      when: item.key is defined
+      ignore_errors: True
+
+    - name: add user to sudoers
+      user:
+        name: "{{ item.login }}"
+        groups: sudo
+        append: yes
+      with_items: "{{ users }}"
+      when: item.sudo is defined and item.sudo == True
+
+# - name: add user to group
+#   user:
+#     name: "{{ item.login }}"
+#     groups: "{{ item.groups }}"
+#     append: yes
+#   with_items: "{{ users }}"
+...

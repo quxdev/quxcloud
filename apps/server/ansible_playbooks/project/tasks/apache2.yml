@@ -1,0 +1,82 @@
+---
+- name: Set up Apache2
+  hosts: all
+  become: yes
+  tasks:
+    - block:
+      
+      - name: set-apache-variables
+        set_fact:
+          code_path: "{{ '/opt/' + service + ('/' + wrapper | default('')) }}"
+          venv_path: "{{ '/opt/' + service + '/venv' }}"
+          conf_file: "{{ service + '.conf' }}"
+
+      - name: copy apache2 site config to /etc/apache2/sites-available
+        ansible.builtin.copy:
+          remote_src: yes
+          src: "{{ code_path + '/config/etc/apache2/sites-available/fmapp.conf' }}"
+          dest: "{{ '/etc/apache2/sites-available/' + conf_file }}"
+
+      - name: customize site.conf
+        ansible.builtin.replace:
+          path: "{{ '/etc/apache2/sites-available/' + conf_file }}"
+          regexp: "{{ item.regexp }}"
+          replace: "{{ item.value }}"
+        with_items:
+        - {regexp: "_SERVERNAME", value: "{{ fqdn_service }}"}
+        - {regexp: "_SERVERADMIN", value: "{{ 'root@' + domain }}"}
+        - {regexp: "_SERVICE", value: "{{ service }}"}
+        - {regexp: "_DOCUMENT_ROOT", value: "{{ code_path }}"}
+        - {regexp: "_WSGI_PATH", value: "{{ code_path + '/' + projdir }}"}
+        - {regexp: "_PYTHONVERSION", value: "{{ virtualenv_python }}"}
+        - {regexp: "_ACCOUNT", value: "{{ service_account }}"}
+        - {regexp: "_CERT", value: "{{ hostname }}"}
+
+
+      - name: add config to sites-enabled
+        command: a2ensite {{ conf_file }}
+
+    - block:
+      - name: stop apache2
+        service:
+          name: apache2
+          state: stopped
+
+      - name: create ssl certificate
+        command: >
+          letsencrypt certonly
+          --agree-tos
+          --standalone
+          --cert-name {{ hostname }}
+          --no-eff-email
+          --email "vishal@finmachines.com"
+          -d {{ fqdn_service }}
+          --noninteractive
+        register: letsencrypt_output
+        changed_when: not "no action taken" in letsencrypt_output.stdout
+        ignore_errors: True
+
+      - name: create directories used by django projects
+        block:
+          - name: create /var/log/finmachines/<service> for logs
+            file:
+              path: "{{ '/var/log/finmachines/' + service }}"
+              state: directory
+              force: no
+
+          - name: create /var/opt/finmachines/<service> for data
+            file:
+              path: "{{ '/var/opt/finmachines/' + service }}"
+              state: directory
+              force: no
+              recurse: yes
+
+      - name: start apache2
+        service:
+          name: apache2
+          state: started
+
+    - block:
+      - name: test configuration
+        command: apache2ctl -t
+...

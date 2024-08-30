@@ -1,0 +1,112 @@
+[
+{
+  "model": "server.ansibleplay",
+  "pk": 1,
+  "fields": {
+    "name": "Ubuntu",
+    "description": "setup host name, install packages, install apache2 and enable wsgi and ssl",
+    "order": 0,
+    "enabled": true,
+    "yml_file": "ubuntu.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 2,
+  "fields": {
+    "name": "Nodejs",
+    "description": "setup nodejs",
+    "order": 1,
+    "enabled": false,
+    "yml_file": "nodejs.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 3,
+  "fields": {
+    "name": "Certs",
+    "description": "setup ssl certs",
+    "order": 2,
+    "enabled": true,
+    "yml_file": "certs.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 4,
+  "fields": {
+    "name": "Sudoers",
+    "description": "Setup sudoers",
+    "order": 3,
+    "enabled": true,
+    "yml_file": "sudoer.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 5,
+  "fields": {
+    "name": "User",
+    "description": "setup users",
+    "order": 4,
+    "enabled": true,
+    "yml_file": "user.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 6,
+  "fields": {
+    "name": "Gitrepo",
+    "description": "Setup git repo",
+    "order": 5,
+    "enabled": true,
+    "yml_file": "gitrepo.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 7,
+  "fields": {
+    "name": "MYSQL",
+    "description": "setup mysql",
+    "order": 6,
+    "enabled": true,
+    "yml_file": "mysql.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 8,
+  "fields": {
+    "name": "Supervisor",
+    "description": "setup supervisor",
+    "order": 7,
+    "enabled": true,
+    "yml_file": "supervisor.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 9,
+  "fields": {
+    "name": "Apache",
+    "description": "setup apache2",
+    "order": 8,
+    "enabled": true,
+    "yml_file": "apache2.yml"
+  }
+},
+{
+  "model": "server.ansibleplay",
+  "pk": 10,
+  "fields": {
+    "name": "Django",
+    "description": "Django configuration and build and deploy of project",
+    "order": 9,
+    "enabled": true,
+    "yml_file": "djconfig.yml"
+  }
+}
+]

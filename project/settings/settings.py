@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "qux.token",
     "apps.gizmo",
     "apps.aws",
+    "apps.server",
 ]
 
 MIDDLEWARE = [

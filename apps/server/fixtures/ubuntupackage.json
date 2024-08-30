@@ -1,0 +1,282 @@
+[
+{
+  "model": "server.ubuntupackage",
+  "pk": 1,
+  "fields": {
+    "name": "software-properties-common"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 2,
+  "fields": {
+    "name": "landscape-common"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 3,
+  "fields": {
+    "name": "update-notifier-common"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 4,
+  "fields": {
+    "name": "cron"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 5,
+  "fields": {
+    "name": "net-tools"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 6,
+  "fields": {
+    "name": "ufw"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 7,
+  "fields": {
+    "name": "acl"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 8,
+  "fields": {
+    "name": "mailutils"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 9,
+  "fields": {
+    "name": "postfix"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 10,
+  "fields": {
+    "name": "tree"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 11,
+  "fields": {
+    "name": "apache2"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 12,
+  "fields": {
+    "name": "certbot"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 13,
+  "fields": {
+    "name": "libsasl2-2"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 14,
+  "fields": {
+    "name": "libsasl2-modules"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 15,
+  "fields": {
+    "name": "libssl-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 16,
+  "fields": {
+    "name": "libffi-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 17,
+  "fields": {
+    "name": "liblapack-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 18,
+  "fields": {
+    "name": "gfortran"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 19,
+  "fields": {
+    "name": "letsencrypt"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 20,
+  "fields": {
+    "name": "python3"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 21,
+  "fields": {
+    "name": "python3-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 22,
+  "fields": {
+    "name": "python3-pip"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 23,
+  "fields": {
+    "name": "python3-venv"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 24,
+  "fields": {
+    "name": "python3-virtualenv"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 25,
+  "fields": {
+    "name": "python3-mysqldb"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 26,
+  "fields": {
+    "name": "python3-scipy"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 27,
+  "fields": {
+    "name": "python3-numpy"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 28,
+  "fields": {
+    "name": "python3-pandas"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 29,
+  "fields": {
+    "name": "python3-ipython"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 30,
+  "fields": {
+    "name": "memcached"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 31,
+  "fields": {
+    "name": "libapache2-mod-wsgi-py3"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 32,
+  "fields": {
+    "name": "mysql-server"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 33,
+  "fields": {
+    "name": "libmysqlclient-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 34,
+  "fields": {
+    "name": "default-libmysqlclient-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 35,
+  "fields": {
+    "name": "python3-mysql.connector"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 36,
+  "fields": {
+    "name": "python-celery-common"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 37,
+  "fields": {
+    "name": "libgraphviz-dev"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 38,
+  "fields": {
+    "name": "supervisor"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 39,
+  "fields": {
+    "name": "redis"
+  }
+},
+{
+  "model": "server.ubuntupackage",
+  "pk": 40,
+  "fields": {
+    "name": "pkg-config"
+  }
+}
+]

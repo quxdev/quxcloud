@@ -1,0 +1,22 @@
+---
+- name: Set up Certs
+  hosts: all
+  become: yes
+  tasks:
+    - name: copy renew_certs.sh
+      copy:
+        src: ../files/usr/local/sbin/renew_certs.sh
+        dest: /usr/local/sbin/renew_certs.sh
+        owner: root
+        group: root
+        mode: 0644
+        force: no
+
+    - name: creates entry (30 4 * * 0 /bin/bash /usr/local/sbin/renew_certs.sh)
+      ansible.builtin.cron:
+        name: Renew certs
+        minute: 30
+        hour: 4
+        weekday: 0
+        job: "/bin/bash /usr/local/sbin/renew_certs.sh"
+...

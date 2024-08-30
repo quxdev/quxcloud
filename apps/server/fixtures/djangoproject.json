@@ -1,0 +1,17 @@
+[
+{
+  "model": "server.djangoproject",
+  "pk": 1,
+  "fields": {
+    "service": 1,
+    "ec2_instance": 1,
+    "git_repo": 1,
+    "environment": "dev",
+    "aws_region": "ap-south-1",
+    "instance_id": "i-0a591d21b82204c93",
+    "public_ip_address": "3.108.193.74",
+    "public_dns_name": "ec2-3-108-193-74.ap-south-1.compute.amazonaws.com",
+    "git_branch": "main"
+  }
+}
+]

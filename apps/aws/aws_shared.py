@@ -1,6 +1,6 @@
 from datetime import datetime
 import boto3
-from apps.aws.aws_models import (
+from apps.aws.models.aws_models import (
     IAMRole,
     IAMPolicy,
     IAMInlinePolicy,
